@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+/*
+this program securely checks the pin of the account holder
+*/
+
+int main() {
+	int pin = 1234;
+		int upin = 0;
+
+		
+
+			//create loop to give user 3 tried to gain acess
+
+			int ntries = 1;
+			while (ntries <= 3) {
+				cout << "Enter your pin now\n";
+				cin >> upin;
+				if (upin == pin) {
+					cout << "access granted\n";
+					break;
+				}
+				else {
+					cout << "access denied\n";
+					cout << "you have " << (3 - ntries) << "left for login tries\n";
+				}
+					ntries++;//increase number of tries
+				}//end while
+
+			
+
+			return 0;
+
+}
